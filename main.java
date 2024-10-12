@@ -56,7 +56,7 @@ public static String produceAnswer(String input){
         return toFracNumber(input);
         //System.out.print("Please enter your equation (quit to quit): ");
     }
-    return null;
+    //return null;
 }
             
 public static String calcInt(int operand1, int operand2, String operator){ 
@@ -443,6 +443,5 @@ public static String calcInt(int operand1, int operand2, String operator){
         else if(numerator3 == 0 && denominator3 == 0){
             return Integer.toString(0);
         }
-        return null;
     }
 }
