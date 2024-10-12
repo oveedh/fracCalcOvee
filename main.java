@@ -21,7 +21,6 @@ public class FracCalc
 public static String produceAnswer(String input){
     if(input.length() < 5){
         System.out.println("Invalid Expression\n");
-        return null;
     }
     else if(input.indexOf("/") == input.lastIndexOf("/"))
         {
@@ -30,7 +29,6 @@ public static String produceAnswer(String input){
         }
     else if(input.indexOf(" ") < 1){
         System.out.println("Invalid Expression");
-        return null;
     }
     else if(!input.contains("/") && !input.contains("_"))
     {
@@ -57,7 +55,6 @@ public static String produceAnswer(String input){
 
         return toFracNumber(input);
         //System.out.print("Please enter your equation (quit to quit): ");
-        //return null;
     }
     return null;
 }
@@ -89,7 +86,7 @@ public static String calcInt(int operand1, int operand2, String operator){
         return Integer.toString(operand1 % operand2);
     } 
     else {
-        return "Invalid Expression";
+        //return "Invalid Expression";
     }
     } 
 
@@ -191,8 +188,6 @@ public static String calcInt(int operand1, int operand2, String operator){
             equation2 = frac1 + " " + operator + " " + frac2;
             return calculateFrac(operator, equation2);
         }
-        
-
     }
     
     // ** IMPORTANT ** DO NOT DELETE THIS FUNCTION.  This function will be used to test your code
@@ -324,6 +319,7 @@ public static String calcInt(int operand1, int operand2, String operator){
                     int numerator3 = (numerator1 * denominator2);
                     int denominator3 = (denominator1 * numerator2);
                     String frac3 = (numerator3 + "/" + denominator3);
+                    //check if denom is 0
                     return simpFrac(frac3, operator);
                 }
         }
@@ -332,8 +328,6 @@ public static String calcInt(int operand1, int operand2, String operator){
             int operand2 = Integer.parseInt(frac2);
             return calcInt(operand1, operand2, operator);
         }
-        
-        return null;
     }
     
     
@@ -366,6 +360,7 @@ public static String calcInt(int operand1, int operand2, String operator){
         {
             int num7 = numerator4/denominator4;
             int num8 = numerator4 + (denominator4*num7);
+            // what does num7 and 8 do?
             return Integer.toString(num7) + "_" + Integer.toString(num8) + "/" + den4;
         }
         if(mixed2 == 0){
@@ -430,6 +425,7 @@ public static String calcInt(int operand1, int operand2, String operator){
                 }
             }
             int n3 = temp1 / numerator3 ;
+            //print temp??
             if (numeratorIsNegative) {
                 n3 = n3 * (-1);
             }
